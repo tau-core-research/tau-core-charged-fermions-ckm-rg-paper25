@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Bevezetés és episztemikus határok}{2}{section.1}%
+\contentsline {section}{\numberline {2}Töltött leptonok: Frobenius-ekvipartíció és RG-stabilitás}{2}{section.2}%
+\contentsline {section}{\numberline {3}Kéthurkos sivatagi No-Go és mértékinvariáns $G_{\mathrm {PS}}$-stabilizáció}{3}{section.3}%
+\contentsline {section}{\numberline {4}Konstruktív $\mathrm {Spin}(10)$ mátrixok, No-Go pajzsok és CKM-zárás}{4}{section.4}%
+\contentsline {section}{\numberline {5}Keveretlen Look-Elsewhere audit, barionszám-védelem és falszifikáció}{4}{section.5}%
