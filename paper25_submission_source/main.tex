@@ -17,22 +17,30 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{remark}[theorem]{Remark}
 
-\title{\textbf{Charged-Fermion Mass Hierarchies, Koide Equipartition,\\
-and Zero-Parameter \texorpdfstring{$\mathrm{CKM}$}{CKM} Closure from a Tetrahedral\\
-\texorpdfstring{$\mathrm{Spin}(10) \to \mathrm{Pati\text{--}Salam} \to \mathrm{SM}$}{Spin(10) -> Pati-Salam -> SM} Renormalization Tower}\\[0.35em]
-\large Two-Loop Matrix \texorpdfstring{$\mathrm{RGEs}$}{RGEs}, Gauge-Invariant \texorpdfstring{$G_{\mathrm{PS}}$}{GPS} Stabilization of \texorpdfstring{$y_b/y_\tau$}{yb/ytau}, and Exact No-Go Shields}
+\title{Charged-Fermion Matching in a \texorpdfstring{$\mathrm{Spin}(10)$}{Spin(10)} Renormalization Chain}
 
 \author{\textbf{Jozsef Olcsak}\\
 \small Independent Researcher $\cdot$ ORCID: \href{https://orcid.org/0009-0003-7311-6522}{0009-0003-7311-6522}\\
 \small Email: \href{mailto:jolcsak@gmail.com}{jolcsak@gmail.com}}
-\date{20 November 2026}
+\date{23 November 2026 (referee revision)}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-\noindent Explaining the thirteen flavor parameters of the Standard Model (SM) charged-fermion sector---nine charged-lepton and quark masses plus four Cabibbo--Kobayashi--Maskawa (CKM) mixing parameters---within non-supersymmetric grand unification confronts severe renormalization-group (RG) and group-theoretic obstructions, notably the failure of minimal $y_b = y_\tau$ unification, the radiative sensitivity of Koide's relation, and singular-value constraints in $\mathrm{Spin}(10)$ Yukawa sectors. Here we perform a complete two-loop SM and gauge-invariant Pati--Salam RG and representation-theoretic audit anchored by the four-vertex tetrahedral ($K_4$, $N = 4$) operator invariants $(d_S, d_A, d_{\mathrm{full}}) = (3, 8, 9)$, $\lambda_q \equiv 2/d_{\mathrm{full}} = 2/9$, and $\sin^2\theta_W^{\mathrm{UV}} = d_S/d_A = 3/8$ across the intermediate thresholds $M_{\mathrm{PS}} = 3.66\times 10^{11}\;\mathrm{GeV}$ and $M_R = 5.565\times 10^{14}\;\mathrm{GeV}$. First, we prove symbolically (\texttt{SymPy}) that for any Hermitian circulant flavon $S_\ell \in \mathrm{End}(V_3)$ with $Y_e \propto S_\ell^2$, Koide's $Q = 2/3$ is equivalent to exact Frobenius norm equipartition $\|\tilde{S}_\ell\|_F^2 = \|S_{\ell,0}\|_F^2$ ($r = 1/\sqrt{2}$) and forms the strict global minimum of a trace-exchange-symmetric quartic potential; setting $\theta = 2/d_{\mathrm{full}} = 2/9\;\mathrm{rad}$ yields pole ratios $m_\mu/m_e = 206.7703$ ($+0.0010\%$) and $m_\tau/m_\mu = 16.8180$ ($+0.0060\%$), while complete two-loop SM evolution shifts $Q_e(\mu)$ by only $+3.66\times 10^{-6}$ across $M_Z \to M_*$ (isolating the $+0.19\%$ pole-to-$\overline{\mathrm{MS}}$ offset to low-energy QED matching). Second, we prove three exact no-go shields: (i) in a pure two-loop SM desert, $-108\,g_3^4$ QCD running drives $y_b(M_R)/y_\tau(M_R)$ to $0.6173$, excluding both $y_b = y_\tau$ and desert $y_b/y_\tau = 2/3$ ($+9.12\sigma_{\mathrm{exp}}$ in $m_b$); (ii) genuine real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ ($|v_u^{(10)}/v_d^{(10)}| = 1$) is globally excluded even under six-phase Autonne--Takagi rephasing; and (iii) symmetric nearest-neighbor $(1,3)=0$ textures underpredict $|V_{ub}|/|V_{cb}|$ by $1.98\times$. Third, in the $D$-parity-broken chain $\mathrm{Spin}(10) \xrightarrow{M_{\mathrm{GUT}}} G_{\mathrm{PS}}\times D \xrightarrow{M_R} G_{\mathrm{PS}} \xrightarrow{M_{\mathrm{PS}}} G_{\mathrm{SM}}$ with $\Phi_{15}(\mathbf{15},\mathbf{2},\mathbf{2})$ retained down to $M_{\mathrm{PS}}$ by Schur's lemma ($b_{\mathrm{PS}} = (-5/3, +2, +26/3)$), manifestly $G_{\mathrm{PS}}$-invariant bidoublet Yukawa RGEs cancel both gauge and $\mathcal{O}(y_t^2)$ fermion-leg splitting between $Y_1$ and $Y_{15}$, freezing $y_b(M_R)/y_\tau(M_R) = 0.6937$ ($+4.06\%$ from $2/3$). Constructing symmetric complex $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ matrices at $M_R$ with only two third-generation scales $(y_t, y_\tau)$ and zero free flavor parameters reproduces all ten quark/CKM observables at $M_Z$ within $\le 2.85\sigma_{\mathrm{tot}}$ including a $2\%$ GUT threshold uncertainty on Yukawa/third-generation couplings ($p_{\mathrm{LEE}} = 9.98\times 10^{-5}$ on the unmixed $G_{\mathrm{PS}}$ tower and $1.92\times 10^{-6}$ in the two-loop desert).
+\noindent We study charged-fermion matching in a specified non-supersymmetric $\mathrm{Spin}(10)$ chain. We derive the Frobenius equipartition condition for the chosen potential, report the finite two-loop matching results and compare restricted bidoublet and Fritzsch textures. The failed real-bidoublet search is numerical and bounded. An explicit counterexample disproves an unrestricted nearest-neighbor CKM ratio identity. The complex fit demonstrates conditional compatibility with the quoted endpoints; IR inputs used in matching do not constitute predictions.
 \end{abstract}
+
+\paragraph{Publication audit (23 November 2026).}
+The real-$10_H$ exclusion is a finite numerical search, using a bounded
+differential-evolution run and a local BFGS refinement (with a rejected
+near-singular region), not a global lower-bound certificate. Its best
+sampled objective is not a proven global minimum. The absolute top and
+tau normalizations are obtained by running observational inputs upward;
+agreement for those normalizations is not an independent prediction.
+The quoted $2\%$ heavy-threshold allowance is an adopted uncertainty
+model, not a calculated matching covariance.
+
 
 \tableofcontents
 \vspace{0.4em}
@@ -48,7 +56,7 @@ In the Standard Model (SM), thirteen of the nineteen continuous parameters resid
 \begin{enumerate}[label=(\arabic*),leftmargin=1.8em,itemsep=2pt]
 \item \emph{The Koide radiative puzzle:} Koide's empirical charged-lepton relation $Q_{\mathrm{pole}} = (m_e + m_\mu + m_\tau)/(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2 = 0.6666605 \simeq 2/3$ \cite{Koide1983} and Brannen's phase $\theta \simeq 2/9\;\mathrm{rad}$ \cite{Brannen2006} hold to parts per million on physical pole masses, yet low-energy QED matching shifts $Q_{\overline{\mathrm{MS}}}(M_Z)$ to $0.667924$ \cite{Sumino2009,XingZhangZhou2012}.
 \item \emph{The non-supersymmetric $b\text{--}\tau$ two-loop RG obstruction:} In a one-Higgs-doublet SM desert, strong two-loop QCD running drives $y_b(\mu)/y_\tau(\mu)$ from $1.635$ at $M_Z$ down to $0.6173$ at $\mu = 5.565\times 10^{14}\;\mathrm{GeV}$ and $0.5635$ near the Planck scale \cite{Arason1992,XingZhangZhou2012,HuangZhou2021}, ruling out minimal $y_b = y_\tau$ unification and straining rational GUT Clebsch--Gordan ratios \cite{AntuschSpinrath2009,AntuschMaurer2013}.
-\item \emph{Minimal $\mathrm{Spin}(10)$ singular-value and CKM no-go constraints:} With a genuine real $\mathbf{10}_H$ ($|v_u^{(10)}| = |v_d^{(10)}|$) plus $\overline{\mathbf{126}}_H$, $Y_u$ is tightly constrained inside $\mathrm{Span}_{\mathbb{C}}\{Y_d, Y_e\}$ \cite{BabuMohapatra1993,BajcSenjanovicVissani2006,DueckRodejohann2013}, while classical Fritzsch nearest-neighbor-interaction (NNI) textures with $(1,3)=0$ predict $|V_{ub}|/|V_{cb}| = \sqrt{y_u/y_c} \simeq 0.045$, missing experiment ($0.0882$) by a factor of two \cite{Fritzsch1978,RobertsRomaninoRoss2001}.
+\item \emph{Restricted texture checks:} The real bidoublet enforces $|r_1|=1$ in the specified matching convention. We report a bounded optimizer search and a separate restricted Fritzsch comparison. Neither excludes all textures of those forms.
 \item \emph{Look-elsewhere / numerology risk:} Algebraic ans\"atze in powers of a small parameter risk overfitting unless tested with complete two-loop matrix RGEs, gauge-invariant intermediate-scale matching, and unmixed look-elsewhere probability bounds.
 \end{enumerate}
 
@@ -247,17 +255,36 @@ Because unbroken $\mathrm{SU}(4)_C$ forbids $\Delta(B - L) = 2$ condensates ($\l
 \label{sec:spin10-ckm}
 % =============================================================================
 
-\subsection{Global Exclusion of Genuine Real \texorpdfstring{$\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$}{10H + 126barH} and Fritzsch NNI}
+\subsection{Bounded Search for Genuine Real \texorpdfstring{$\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$}{10H + 126barH} and Fritzsch NNI}
 \label{subsec:nogo-shields}
 
-\begin{theorem}[Genuine Real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ and Fritzsch NNI No-Go Shields]
+\begin{theorem}[Restricted real-bidoublet search and Fritzsch comparison]
 \label{thm:spin10-nni-nogo}
 At the matching scale $\mu = M_R = 5.5649\times 10^{14}\;\mathrm{GeV}$:
 \begin{enumerate}[label=(\roman*),leftmargin=1.8em,itemsep=2pt]
-\item \emph{Global exclusion of genuine real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$:} For a genuine real $\mathbf{10}_H = \mathbf{10}_H^*$, the $(\mathbf{1},\mathbf{2},\mathbf{2})$ bidoublet satisfies $\Phi_1 = \tau_2 \Phi_1^* \tau_2$, enforcing $|v_u^{(10)}| = |v_d^{(10)}|$, i.e., $|r_1| \equiv |v_u^{(10)}/v_d^{(10)}| = 1$ ($r_1 = e^{i\xi}$, $r_2 \in \mathbb{C}$) in $Y_u = r_1 Y_{10} + r_2 Y_{126}$, $Y_d = Y_{10} + Y_{126}$, $Y_e = Y_{10} - 3Y_{126}$ \cite{BajcSenjanovicVissani2006}, whence $Y_e = (r_1 - r_2)^{-1}[4Y_u - (3r_1 + r_2)Y_d]$. Optimizing globally (\texttt{differential\_evolution} + BFGS) over $\xi$, $r_2 \in \mathbb{C}$, and all six Autonne--Takagi phases $V_g = P_L V_{\mathrm{CKM}} P_R$, $Y_u = P_u \mathrm{diag}(y_u, y_c, y_t)$ yields $|r_2| = 107.7$ and $\min \sum_{\ell=e,\mu,\tau}[\ln(y_\ell^{\mathrm{fit}}/y_\ell^{\mathrm{target}})]^2 = 1.175$, missing $(y_e, y_\mu, y_\tau)$ by factors $(1.681,\; 0.396,\; 1.248)$ (Fig.~\ref{fig:nogo}a). (Note: a Peccei--Quinn complex $\mathbf{10}_H$ with $\tilde{Y}_{10} = 0$ and unconstrained $r_1 \in \mathbb{C}$ has eight real parameters for three singular values and fits the charged sector alone, but is excluded once the seesaw neutrino/PMNS sector $M_R \propto Y_{126}$ is included \cite{BajcSenjanovicVissani2006,DueckRodejohann2013}.)
-\item \emph{Fritzsch NNI $(1,3)=0$ exclusion:} Any symmetric or Hermitian texture with $(Y_u)_{11} = (Y_u)_{13} = (Y_d)_{11} = (Y_d)_{13} = 0$ enforces $|V_{ub}|/|V_{cb}| = \sqrt{y_u / y_c} = 0.04458$, falling short of $|V_{ub}|/|V_{cb}|_{\mathrm{PDG}} = 0.08824 \pm 0.0032$ by $1.98\times$ (Fig.~\ref{fig:nogo}b).
+\item \emph{Bounded numerical search for genuine real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$:} For a genuine real $\mathbf{10}_H = \mathbf{10}_H^*$, the $(\mathbf{1},\mathbf{2},\mathbf{2})$ bidoublet satisfies $\Phi_1 = \tau_2 \Phi_1^* \tau_2$, enforcing $|v_u^{(10)}| = |v_d^{(10)}|$, i.e., $|r_1| \equiv |v_u^{(10)}/v_d^{(10)}| = 1$ ($r_1 = e^{i\xi}$, $r_2 \in \mathbb{C}$) in $Y_u = r_1 Y_{10} + r_2 Y_{126}$, $Y_d = Y_{10} + Y_{126}$, $Y_e = Y_{10} - 3Y_{126}$ \cite{BajcSenjanovicVissani2006}, whence $Y_e = (r_1 - r_2)^{-1}[4Y_u - (3r_1 + r_2)Y_d]$. Searching numerically (\texttt{differential\_evolution} + BFGS) over $\xi$, $r_2 \in \mathbb{C}$, and all six Autonne--Takagi phases $V_g = P_L V_{\mathrm{CKM}} P_R$, $Y_u = P_u \mathrm{diag}(y_u, y_c, y_t)$ yields $|r_2| = 107.7$ and $\sum_{\ell=e,\mu,\tau}[\ln(y_\ell^{\mathrm{fit}}/y_\ell^{\mathrm{target}})]^2 = 1.175$, missing $(y_e, y_\mu, y_\tau)$ by factors $(1.681,\; 0.396,\; 1.248)$ (Fig.~\ref{fig:nogo}a). (Note: a Peccei--Quinn complex $\mathbf{10}_H$ with $\tilde{Y}_{10} = 0$ and unconstrained $r_1 \in \mathbb{C}$ has eight real parameters for three singular values and fits the charged sector alone, but is excluded once the seesaw neutrino/PMNS sector $M_R \propto Y_{126}$ is included \cite{BajcSenjanovicVissani2006,DueckRodejohann2013}.)
+\item \emph{Restricted Fritzsch comparison:} The hierarchical Fritzsch estimate $|V_{ub}/V_{cb}|\simeq\sqrt{y_u/y_c}$ gives $0.04458$ at this benchmark. It is not an exact identity of arbitrary symmetric or Hermitian nearest-neighbor textures with $(1,1)=(1,3)=0$.
 \end{enumerate}
 \end{theorem}
+
+\paragraph{Exact counterexample to the unrestricted texture claim.}
+Take real symmetric up/down matrices in arbitrary common Yukawa units,
+\[
+ Y_u=\begin{pmatrix}
+ 0&\sqrt{12/5}&0\\ \sqrt{12/5}&3/2&\sqrt{7/20}\\0&\sqrt{7/20}&5/2
+ \end{pmatrix},
+ \qquad Y_d=\begin{pmatrix}0&1&0\\1&1&0\\0&0&3\end{pmatrix}.
+\]
+Both obey the stated zeros. The up eigenvalues are $-1,2,3$ and
+the bottom left eigenvector is $e_3$. For an up eigenvalue $\lambda$,
+the normalized third component has squared magnitude
+$\big[(7/20)/(\lambda-5/2)^2\big]/\big[1+(12/5)/\lambda^2+
+(7/20)/(\lambda-5/2)^2\big]$. At $-1,2$ this gives $1/120,7/15$.
+Thus $|V_{ub}/V_{cb}|^2=1/56$, not $y_u/y_c=1/2$.
+This is a counterexample to the identity, not a fit. A failed bounded
+optimizer search supplies no certified global lower bound. The endpoint
+fit uses IR mass information in UV matching; those entries are not
+blind predictions.
 
 \subsection{Complex \texorpdfstring{$\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$}{10H + 126barH} Construction and Top-Down Closure}
 \label{subsec:complex-spin10-closure}
@@ -322,7 +349,7 @@ $J_{\mathrm{CKM}}\times 10^5$ & Derived ($U_u^\dagger U_d$) & $3.432$ & $3.12 \p
 \begin{figure}[t!]
 \centering
 \includegraphics[width=0.96\textwidth]{../figures/fig4_spin10_nogo_and_lee.pdf}
-\caption{\textbf{(a)} Global singular-value exclusion of genuine real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ ($|r_1|=1$, red) vs.\ exact complex $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ closure (blue). \textbf{(b)} Exclusion of symmetric Fritzsch NNI $(1,3)=0$ textures ($\sqrt{y_u/y_c} = 0.0446$, $1.98\times$ shortfall) vs.\ top-down $|V_{ub}|/|V_{cb}| = 0.0833$ and PDG 2024 ($0.0882 \pm 0.0032$).}
+\caption{\textbf{(a)} Finite real-bidoublet search compared with the adopted complex benchmark. The positive residual is not a global lower bound. \textbf{(b)} Hierarchical Fritzsch estimate compared with the reference ratio; general nearest-neighbor textures are not excluded by this comparison.}
 \label{fig:nogo}
 \end{figure}
 
@@ -370,10 +397,18 @@ Along the chain~\eqref{eq:consistent-chain}:
 \label{sec:conclusions}
 % =============================================================================
 
-Combining complete two-loop SM matrix RGEs with gauge-invariant Pati--Salam bidoublet running on $[M_{\mathrm{PS}}, M_R]$ and symmetric complex $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ Yukawa matrices resolves the two-loop $b\text{--}\tau$ desert obstruction while reproducing all ten independent quark/CKM observables within $\le 2.85\sigma_{\mathrm{tot}}$ with zero free flavor ratios, alongside exact algebraic no-go shields excluding genuine real $\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ and Fritzsch NNI textures. Deriving the discrete UV boundary weights (\texttt{BC-UV-FLAV-1/2/3}), one-loop $M_{\mathrm{PS}}$ threshold corrections, and the overall third-generation scales $(y_t, y_\tau)$ defines the next theoretical milestone.
+In the specified two-loop running and matching prescription, the complex
+$\mathbf{10}_H \oplus \overline{\mathbf{126}}_H$ benchmark is compatible
+with the reported quark and CKM inputs at the stated uncertainty allowance.
+The bounded real-bidoublet search and restricted Fritzsch comparison do
+not exclude every texture in either class. The counterexample to the
+unrestricted CKM ratio identity survives independently of this fit.
+The UV boundary weights, one-loop $M_{\mathrm{PS}}$ thresholds and
+independent normalization of $(y_t,y_\tau)$ remain open.
 
 \section*{Reproducibility and Data Availability}
-All \texttt{SymPy} proofs, two-loop SM + $G_{\mathrm{PS}}$ RGE integrations, global \texttt{differential\_evolution} optimizations, and figures execute in $< 15\;\mathrm{s}$ via:
+The \texttt{SymPy} checks, two-loop SM + $G_{\mathrm{PS}}$ RGE integrations,
+bounded \texttt{differential\_evolution} searches, and figures can be run via:
 \begin{quote}\small\ttfamily
 python3 scripts/verify\_paper25\_fermion\_masses\_ckm\_rg.py\\
 python3 scripts/generate\_paper25\_figures.py
